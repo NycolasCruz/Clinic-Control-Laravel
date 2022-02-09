@@ -18,10 +18,10 @@
                 <img src="/img/project/{{ $consult->image }}" class="card-img-top" title="Foto do Paciente">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-user icon-card"></i> {{ $consult->choose_name }}</h5>
-                    <p class="card-text"><i class="fas fa-calendar-day icon-card"></i> Idade: {{ $consult->age }} anos</p>
-                    <p class="card-text"><i class="fas fa-id-card icon-card"></i> CPF: {{ $consult->cpf }}</p>
-                    <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> Número: {{ $consult->number }}</p>
-                    <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> {{ $consult->status }}</p>
+                    <p class="card-text"><i class="fas fa-calendar-day icon-card"></i> <strong>IDADE:</strong> {{ $consult->age }} ano(s)</p>
+                    <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> {{ $consult->cpf }}</p>
+                    <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> {{ $consult->number }}</p>
+                    <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> <strong>{{ $consult->status }}</strong></p>
                     <a href="show/{{ $consult->id }}" class="btn btn-dark card-button" tabindex="-1">Mais Informações</a>
                 </div>
             </div>

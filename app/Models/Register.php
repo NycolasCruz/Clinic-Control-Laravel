@@ -84,9 +84,9 @@ class Register extends Model
     public function getStatusAttribute()
     {
         return $this->defineStatus([
-            'Sintomas insuficientes',
-            'Potencial infectado',
-            'Possível infectado'
+            'SINTOMAS INSUFICIENTES',
+            'POTENCIAL INFECTADO',
+            'POSSÍVEL INFECTADO'
         ]);
     }
 }
