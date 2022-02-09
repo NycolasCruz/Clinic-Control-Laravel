@@ -146,26 +146,20 @@ img, svg {
 .card-body h5{
     margin: -2px 0 0;
 }
-.card-body p{
+.card-body p, .card-body a{
     margin: 6px 0 0;
     font-weight: 500;
 }
-.card-body p, .card-body h5{
+.card-body a{
+    color: #212529;
+}
+.card-body h5, .card-body p, .card-body a{
     display: flex;
     align-items: center;
     gap: 6px;
 }
-.card-body a{
-    margin: 9px 0 -3px;
-    color: #000000;
-}
 .safe{
     background-color: #31b531;
-}
-.card-button{
-    background-color: #00000000;
-    border-color: black;
-    transition: all 0.5s;
 }
 .card-button:hover{
     background-color: #00000015;

@@ -22,7 +22,7 @@
                     <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> {{ $consult->cpf }}</p>
                     <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> {{ $consult->number }}</p>
                     <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> <strong>{{ $consult->status }}</strong></p>
-                    <a href="show/{{ $consult->id }}" class="btn btn-dark card-button" tabindex="-1">Mais Informações</a>
+                    <a href="show/{{ $consult->id }}" id="info-link" class=""><i class="fas fa-info icon-card"></i><strong>MAIS INFORMAÇÕES</strong></a>
                 </div>
             </div>
         </div>
