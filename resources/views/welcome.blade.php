@@ -28,7 +28,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="/" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
+                <form action="/create" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                     @csrf
                     <div class="form-group">
 
@@ -158,6 +158,8 @@
     <h5 class="mt-2">Nenhum Cadastro Encontrado <i class="fas fa-frown"></i></h5>
     <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
 @endif
+
+{{-- cards --}}
 
 <div class="container">
     <div class="row">
