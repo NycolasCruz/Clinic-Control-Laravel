@@ -32,7 +32,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="/update/{{ $consult->id }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data">
+                <form action="/update/{{ $consult->id }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
@@ -153,6 +153,8 @@
 @endsection
 
 @section('content')
+
+{{-- cards --}}
 
 <div id="container" class="container">
     <div class="row">
