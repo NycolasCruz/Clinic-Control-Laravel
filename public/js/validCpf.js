@@ -1,7 +1,3 @@
-const form = document.forms['form']
-const feedback = document.querySelector('#feedback')
-const borderCpf = document.querySelector('#cpf')
-
 function validCpf(cpf) {
     cpf = cpf.replace(/[^\d]+/g, '')
     if (cpf == '')
@@ -37,32 +33,33 @@ function validCpf(cpf) {
     return true
 }
 
-function validationFeedback(){
-    let hasEmptyInput = false
-    let inputCpf = {
-        cpf: form.cpf.value
-    }
-    if(someInputIsEmpty(inputCpf.cpf) || !validCpf(inputCpf.cpf)){
-        feedback.style.display = 'block'
-        feedback.innerHTML = 'CPF inválido' //mostrar só no ultimo texto
-        feedback.setAttribute('class', 'invalid-feedback')
-        borderCpf.setAttribute('class', 'form-control')
-        hasEmptyInput = true
-    }else{
-        feedback.style.display = 'block'
-        feedback.innerHTML = ''
-        feedback.setAttribute('class', 'valid-feedback')
-        borderCpf.setAttribute('class', 'form-control border-cpf')
-    }
-    if(hasEmptyInput){
-        return false
-    }else{
+function emptyInput(data){
+    if(data.length == 0) {
         return true
     }
 }
 
-function someInputIsEmpty(input) {
-    if(input.length == 0) {
-        return true
+const form = document.forms['form']
+const feedback = document.querySelector('#feedback')
+const borderCpf = document.querySelector('#cpf')
+
+function validationFeedback(){
+    let cpf = form.cpf.value
+    if(!validCpf(cpf)){
+        if(cpf.length == 14){
+            feedback.style.display = 'block'
+            feedback.innerHTML = ('<i class="fas fa-triangle-exclamation"></i> CPF Inválido')
+            feedback.setAttribute('class', 'invalid-feedback')
+            borderCpf.setAttribute('class', 'form-control')
+        }else{
+            feedback.innerHTML = ''
+            feedback.setAttribute('class', '')
+            borderCpf.setAttribute('class', 'form-control')
+        }
+        return false
+    }else{
+        feedback.innerHTML = ''
+        feedback.setAttribute('class', '')
+        borderCpf.setAttribute('class', 'form-control border-cpf')
     }
 }

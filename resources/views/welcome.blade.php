@@ -28,7 +28,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="/" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data">
+                <form action="/" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                     @csrf
                     <div class="form-group">
 
@@ -47,7 +47,7 @@
                             <label for="floatinginput">Digite a idade</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" id="cpf" name="cpf" placeholder="." class="form-control" autocomplete="off" maxlength="14" pattern="[0-9.-]{14}" title="Exemple: 000.000.000-00" value="{{ old('cpf') }}" required onkeyup=" validationFeedback()">
+                            <input type="text" id="cpf" name="cpf" placeholder="." class="form-control" autocomplete="off" maxlength="14" pattern="[0-9.-]{14}" title="Exemple: 000.000.000-00" value="{{ old('cpf') }}" required onkeyup="validationFeedback()">
                             <label for="floatinginput">Digite o CPF</label>
                             <div id="feedback"></div>
                         </div>
