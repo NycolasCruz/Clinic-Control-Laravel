@@ -6,10 +6,10 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', [RegisterController::class, 'index']);
 
-Route::post('/', [RegisterController::class, 'store']);
+Route::post('/create', [RegisterController::class, 'store']);
 
 Route::get('show/{id}', [RegisterController::class, 'show']);
 
-Route::delete('show/{id}', [RegisterController::class, 'destroy']);
+Route::delete('delete/{id}', [RegisterController::class, 'destroy']);
 
-Route::put('show/{id}', [RegisterController::class, 'update']);
+Route::put('update/{id}', [RegisterController::class, 'update']);

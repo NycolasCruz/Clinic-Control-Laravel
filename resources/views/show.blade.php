@@ -9,11 +9,11 @@
             <a href="/" tabindex="-1"><img src="/img/logo.png"></a>
         </div>
         <div id="nav-flex">
-            <form class="d-flex">
+            <div class="d-flex">
                 <a class="navbar-brand" href="/" tabindex="1">Recepção <i class="fas fa-hospital"></i></a>
                 <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#edit" tabindex="2">Editar Cadastro <i class="fas fa-user-edit"></i></a>
-            </form>
-            <form action="/show/{{ $consult->id }}" method="POST" id="form-delete" class="d-flex">
+            </div>
+            <form action="/delete/{{ $consult->id }}" method="POST" id="form-delete" class="d-flex">
                 @csrf
                 @method('DELETE')
                 <button id="delete-btn" type="submit" class="navbar-brand" tabindex="3" onclick="return confirm('Deseja Remover Este Cadastro Permanentemente?')">Excluir Cadastro <i class="fas fa-user-times"></i></button>
@@ -32,7 +32,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="/show/{{ $consult->id }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
+                <form action="/update/{{ $consult->id }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
