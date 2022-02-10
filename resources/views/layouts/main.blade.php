@@ -41,7 +41,7 @@
     @yield('content')
 
     {{-- validação CPF --}}
-    <script src="js/validCpf.js"></script>
+    <script src="/js/validCpf.js"></script>
 
     {{-- font awesome --}}
     <script src="https://kit.fontawesome.com/36eec2ffe7.js" crossorigin="anonymous"></script>
@@ -52,10 +52,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
     {{-- jquery --}}
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
 
     {{-- máscaras --}}
-    <script src="js/jquery.mask.min.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#cpf').mask('000.000.000-00')
