@@ -1,4 +1,13 @@
 @extends('layouts.main')
+
+{{-- voltar ao topo --}}
+
+<a id="back-to-top">
+    <h1>
+        <i class="fas fa-circle-arrow-up"></i>
+    </h1>
+</a>
+
 @section('navbar')
 
 {{-- navbar --}}
@@ -149,6 +158,8 @@
 
 @section('content')
 
+<div class="container">
+
 {{-- caso não tenha cadastros --}}
 
 @if(count($consults) == 0 && $search)
@@ -161,7 +172,6 @@
 
 {{-- cards --}}
 
-<div class="container">
     <div class="row">
         @foreach($consults as $consult)
             <div class="col-lg-4">

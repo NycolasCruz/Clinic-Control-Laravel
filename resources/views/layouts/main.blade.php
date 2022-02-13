@@ -28,19 +28,10 @@
             <p class="invalid-msg">{{ $error }}</p>
         @endforeach
     @endif
-    <div class="row">
-        @if(session('create'))
-            <p class="valid-msg">{{ session('create') }}</p>
-        @elseif(session('update'))
-            <p class="valid-msg">{{ session('update') }}</p>
-        @elseif(session('destroy'))
-            <p class="invalid-msg">{{ session('destroy') }}</p>
-        @endif
-    </div>
 
     @yield('content')
 
-    {{-- validação CPF --}}
+    {{-- validação --}}
     <script src="/js/validCpf.js"></script>
 
     {{-- font awesome --}}
@@ -60,6 +51,30 @@
         $(document).ready(function(){
             $('#cpf').mask('000.000.000-00')
             $('#number').mask('(00) 00000-0000')
+        })
+    </script>
+
+    {{-- sweet alert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <div class="row">
+        @if(session('create'))
+            <script>swal('', '{{ session('create') }}', 'success')</script>
+        @elseif(session('update'))
+            <script>swal('', '{{ session('update') }}', 'success')</script>
+        @elseif(session('destroy'))
+            <script>swal('', '{{ session('destroy') }}', 'success')</script>
+        @endif
+    </div>
+
+    {{-- modal de confirmação --}}
+    <script src="/js/confirmModal.js"></script>
+
+    {{-- voltar ao topo --}}
+    <script>
+        const btn = document.querySelector('#back-to-top')
+
+        btn.addEventListener('click', function(){
+            window.scrollTo(0, 0)
         })
     </script>
 

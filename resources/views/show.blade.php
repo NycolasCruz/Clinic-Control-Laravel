@@ -16,7 +16,7 @@
             <form action="/delete/{{ $consult->id }}" method="POST" id="form-delete" class="d-flex">
                 @csrf
                 @method('DELETE')
-                <button id="delete-btn" type="submit" class="navbar-brand" tabindex="3" onclick="return confirm('Deseja Remover Este Cadastro Permanentemente?')">Excluir Cadastro <i class="fas fa-user-times"></i></button>
+                <button id="delete-btn" type="submit" class="navbar-brand" tabindex="3" onclick="return teste()">Excluir Cadastro <i class="fas fa-user-times"></i></button>
             </form>
         </div>
     </div>

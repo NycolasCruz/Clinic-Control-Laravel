@@ -27,23 +27,20 @@ body{
 a{
     cursor: pointer;
 }
-.valid-msg{
-    background-color: #D4EDDA;
-    color: #155724;
-    border: 1px solid #C3E6CB;
-    width: 100%;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 10px;
+.swal-text{
+    font-size: 18px;
+    font-weight: 600;
 }
-.invalid-msg{
-    background-color: #edd4d4;
-    color: #571515;
-    border: 1px solid #e6c3c3;
-    width: 100%;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 10px;
+#back-to-top{
+    position: fixed;
+    bottom: 35px;
+    right: 40px;
+    color: #212529;
+    transition: all 0.3s;
+    opacity: 1;
+}
+#back-to-top:hover{
+    opacity: 0.9;
 }
 
 /* navbar */
