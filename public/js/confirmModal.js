@@ -1,14 +1,21 @@
-function teste(){
+const btnDelete = document.querySelector('#delete-btn')
+let redirect = false
+
+function confirmModal(){
+    if(redirect == true){
+        return
+    }
     swal({
-        text: 'Deseja Remover Este Cadastro Permanentemente?',
-        icon: 'warning',
-        buttons: ['Não', true],
+        text:       'Deseja Remover Este Cadastro Permanentemente?',
+        icon:       'warning',
+        buttons:    ['Não', true],
         dangerMode: true,
-      })
-      .then((willDelete) => {
-            if (willDelete){
-                console.log('Tudo certo!')
-            }
-      })
-      return false
+        })
+    .then((willDelete) => {
+        if(willDelete){
+            redirect = true
+            btnDelete.click()
+        }
+    })
+    return false
 }

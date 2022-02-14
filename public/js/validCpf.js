@@ -42,6 +42,7 @@ function emptyInput(data){
 const form = document.forms['form']
 const feedback = document.querySelector('#feedback')
 const borderCpf = document.querySelector('#cpf')
+const borderClass = borderCpf.classList
 
 function validationFeedback(){
     let cpf = form.cpf.value
@@ -50,16 +51,15 @@ function validationFeedback(){
             feedback.style.display = 'block'
             feedback.innerHTML = ('<i class="fas fa-triangle-exclamation"></i> CPF Inválido')
             feedback.setAttribute('class', 'invalid-feedback')
-            borderCpf.setAttribute('class', 'form-control')
+            borderClass.remove('border-cpf')
         }else{
             feedback.innerHTML = ''
-            feedback.setAttribute('class', '')
-            borderCpf.setAttribute('class', 'form-control')
+            feedback.classList.remove('invalid-feedback')
+            borderClass.remove('border-cpf')
         }
         return false
     }else{
         feedback.innerHTML = ''
-        feedback.setAttribute('class', '')
-        borderCpf.setAttribute('class', 'form-control border-cpf')
+        borderClass.add('border-cpf')
     }
 }

@@ -37,13 +37,13 @@ class StoreUpdateRegisterRequest extends FormRequest
     public function messages()
     {
         return [
-            '*.required' => 'Não Foi Possível Realizar Esta Ação! Este Campo É Obrigatório',
-            '*.image' => 'Não Foi Possível Realizar Esta Ação! Selecione Uma Imagem Válida',
-            'name.min' => 'Não Foi Possível Realizar Esta Ação! O Nome Deve Ser Válido',
-            'name.max' => 'Não Foi Possível Realizar Esta Ação! O Nome Deve Ser Válido',
-            'age.min' => 'Não Foi Possível Realizar Esta Ação! A Idade Deve Ser Válida',
-            'age.max' => 'Não Foi Possível Realizar Esta Ação! A Idade Deve Ser Válida',
-            'cpf.unique' => 'Não Foi Possível Realizar Esta Ação! Este CPF Já Foi Cadastrado'
+            '*.required'    => 'Este Campo É Obrigatório',
+            '*.image'       => 'Selecione Uma Imagem Válida',
+            'name.min'      => 'O Nome Deve Ser Válido',
+            'name.max'      => 'O Nome Deve Ser Válido',
+            'age.min'       => 'A Idade Deve Ser Válida',
+            'age.max'       => 'A Idade Deve Ser Válida',
+            'cpf.unique'    => 'Este CPF Já Foi Cadastrado'
         ];
     }
 }
