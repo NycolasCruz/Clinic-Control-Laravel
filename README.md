@@ -8,6 +8,7 @@
 - CSS
 - Bootstrap
 - JavaScript
+- JQuery
 - Requisições AJAX
 - PHP
 - Laravel
@@ -16,11 +17,13 @@
 
 <p align="justify">O projeto tem como principal função agilizar o cadastro de novos pacientes e classificá-los com base no total de sintomas relacionados ao Covid-19 que forem apresentados no momento do cadastro, funcionando como uma espécie de triagem que determina os pacientes que estão com maiores e menores chances de estarem contaminados com o vírus. Também apresenta fácil compreensão e adaptação.</p>
 
-## 🔧 Funções
+## 🔧 Características
 
 - [x] Criação, visualização, edição e remoção de pacientes.
-- [x] Campo de pesquisa para filtrar pacientes a partir do nome.
+- [x] Campo de pesquisa para filtrar pacientes a partir do nome ou nome social.
 - [x] Página específica que exibe os sintomas de cada paciente.
+- [x] Mensagens informativas (que ajudam e orientam o usuário)
+- [x] Validação de CPF e máscaras com JQuery 
 
 ## 🤖 Autor
 
