@@ -21,8 +21,7 @@ class StoreUpdateRegisterRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    function rules() {
         return [
             'name'          => 'required|string|min:3|max:50|',
             'age'           => 'required|integer|min:0|max:120',
@@ -34,8 +33,7 @@ class StoreUpdateRegisterRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
+    function messages() {
         return [
             '*.required'    => 'Este Campo É Obrigatório',
             '*.image'       => 'Selecione Uma Imagem Válida',
