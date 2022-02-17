@@ -73,7 +73,7 @@
         {{-- máscaras --}}
         <script src="/js/jquery.mask.min.js"></script>
         <script>
-            $(document).ready(function(){
+            $(document).ready(() => {
                 $('#cpf').mask('000.000.000-00')
                 $('#number').mask('(00) 00000-0000')
             })

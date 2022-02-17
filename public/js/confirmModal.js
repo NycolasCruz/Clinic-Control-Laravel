@@ -1,8 +1,8 @@
 const btnDelete = document.querySelector('#delete-btn')
 let redirect = false
 
-function confirmModal(){
-    if(redirect == true){
+let confirmModal = () => {
+    if(redirect == true) {
         return
     }
     swal({
@@ -12,7 +12,7 @@ function confirmModal(){
         dangerMode: true,
         })
     .then((willDelete) => {
-        if(willDelete){
+        if(willDelete) {
             redirect = true
             btnDelete.click()
         }

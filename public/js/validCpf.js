@@ -1,4 +1,4 @@
-function validCpf(cpf) {
+let validCpf = cpf => {
     cpf = cpf.replace(/[^\d]+/g, '')
     if (cpf == '')
         return false
@@ -33,7 +33,7 @@ function validCpf(cpf) {
     return true
 }
 
-function emptyInput(data){
+let emptyInput = data => {
     if(data.length == 0) {
         return true
     }
@@ -44,21 +44,21 @@ const feedback = document.querySelector('#feedback')
 const borderCpf = document.querySelector('#cpf')
 const borderClass = borderCpf.classList
 
-function validationFeedback(){
+let validationFeedback = () => {
     let cpf = form.cpf.value
-    if(!validCpf(cpf)){
-        if(cpf.length == 14){
+    if(!validCpf(cpf)) {
+        if(cpf.length == 14) {
             feedback.style.display = 'block'
             feedback.innerHTML = ('<i class="fas fa-triangle-exclamation"></i> CPF Inválido')
             feedback.setAttribute('class', 'invalid-feedback')
             borderClass.remove('border-cpf')
-        }else{
+        }else {
             feedback.innerHTML = ''
             feedback.classList.remove('invalid-feedback')
             borderClass.remove('border-cpf')
         }
         return false
-    }else{
+    }else {
         feedback.innerHTML = ''
         borderClass.add('border-cpf')
     }

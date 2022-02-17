@@ -1,14 +1,14 @@
 const btnToTop = document.querySelector('#back-to-top')
 const hiddenBtn = btnToTop.classList
 
-btnToTop.addEventListener('click', function(){
+btnToTop.addEventListener('click', () => {
     window.scrollTo(0, 0)
 })
-addEventListener('scroll', function(){
+addEventListener('scroll', () => {
     let height = document.documentElement.scrollTop
-    if(height > 650){
+    if(height > 650) {
         hiddenBtn.remove('hidden')
-    }else if(height < 550){
+    }else if(height < 550) {
         hiddenBtn.add('hidden')
     }
 })
