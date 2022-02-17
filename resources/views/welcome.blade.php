@@ -148,12 +148,12 @@
 
         {{-- caso não tenha cadastros (encontrados) --}}
 
-        @if(count($consults) == 0)
-            <h5 class="mt-2">Nenhum Paciente Encontrado <i class="fas fa-frown"></i></h5>
-            <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
-        @elseif(count($consults) == 0 && $search)
+        @if(count($consults) == 0 && $search)
             <h5 class="mt-2">Nenhum Paciente Encontrado Com {{ $search }} <i class="fas fa-frown"></i></h5>
             <a href="/">Ver Todos os Cadastros!</a>
+        @elseif(count($consults) == 0)
+            <h5 class="mt-2">Nenhum Paciente Encontrado <i class="fas fa-frown"></i></h5>
+            <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
         @endif
 
         <div class="row">
