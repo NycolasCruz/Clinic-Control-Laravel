@@ -79,6 +79,27 @@
 
         {{-- ajax --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+        <script>
+            $("form[id='form-register']").submit(event => {
+                event.preventDefault()
+
+                $.ajax({
+                    url: {{route('criar')}},
+                    type: 'POST',
+                    data: new formData(this)
+                    dataType: 'json'
+                    contentType: false,
+                    processData: false,
+                    success: response => {
+
+                    }
+                    error: response => {
+                        
+                    }
+                })
+            })
+        </script>
+
     </div>
 </body>
 </html>
