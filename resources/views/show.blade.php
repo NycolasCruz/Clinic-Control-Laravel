@@ -3,14 +3,14 @@
     <nav class="navbar fixed-top navbar-dark">
         <div class="container-fluid mt-2 mb-2">
             <div>
-                <a href="/" tabindex="-1"><img src="/img/logo.png"></a>
+                <a href="{{ route('pagina.principal') }}" tabindex="-1"><img src="/img/logo.png"></a>
             </div>
             <div id="nav-flex">
                 <div class="d-flex">
-                    <a class="navbar-brand" href="/" tabindex="1">Recepção <i class="fas fa-hospital"></i></a>
+                    <a href="{{ route('pagina.principal') }}" class="navbar-brand" tabindex="1">Ver Todos Os Cadastros <i class="fas fa-users"></i></a>
                     <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#edit" tabindex="2">Editar Cadastro <i class="fas fa-user-edit"></i></a>
                 </div>
-                <form action="/delete/{{ $consult->id }}" method="POST" id="form-delete" class="d-flex">
+                <form action="{{ route('deletar', $consult->id) }}" method="POST" id="form-delete" class="d-flex">
                     @csrf
                     @method('DELETE')
                     <button id="delete-btn" type="submit" class="navbar-brand" tabindex="3" onclick="return confirmModal()">Excluir Cadastro <i class="fas fa-user-times"></i></button>
@@ -25,7 +25,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="/update/{{ $consult->id }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
+                    <form action="{{ route('atualizar', $consult->id) }}" method="POST" id="form-update" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
