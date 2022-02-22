@@ -33,8 +33,11 @@ class RegisterController extends Controller
         $infoImage->move(public_path('/img/project'), $nameImage);
         $allData['image'] = $nameImage;
 
-        Register::create($allData);
-        return redirect('/')->with('create', 'Paciente Cadastrado Com Sucesso!');
+        $pacienteCriado = Register::create($allData);
+        $return['success'] = true;
+        $return['message'] = 'Paciente Cadastrado Com Sucesso!';
+        $return['dados'] = $pacienteCriado;
+        return $return;
     }
 
     function show($id) {

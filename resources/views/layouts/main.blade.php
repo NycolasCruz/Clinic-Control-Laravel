@@ -84,20 +84,21 @@
                 event.preventDefault()
 
                 $.ajax({
-                    url: {{route('criar')}},
+                    url: "{{ route('criar') }}",
                     type: 'POST',
-                    data: new formData(this)
-                    dataType: 'json'
+                    data: new FormData(this),
+                    dataType: 'json',
                     contentType: false,
                     processData: false,
-                    success: response => {
+                    // success: response => {
 
-                    }
-                    error: response => {
+                    // },
+                    // error: response => {
 
-                    }
+                    // }
                 })
             })
+            // onsubmit="return validationFeedback()"
         </script>
 
     </div>
