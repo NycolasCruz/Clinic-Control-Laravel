@@ -23,6 +23,11 @@ class Register extends Model
         'socialName'
     ];
 
+    protected $appends = [
+        'status',
+        'color'
+    ];
+
     // mutators
 
     function setNameAttribute($value) {
