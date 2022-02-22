@@ -4,9 +4,13 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RegisterController;
 
+// welcome
+
 Route::get('/', [RegisterController::class, 'index'])->name('página-principal');
 
 Route::post('/create', [RegisterController::class, 'store'])->name('criar');
+
+// show
 
 Route::get('show/{id}', [RegisterController::class, 'show'])->name('mostrar-dados');
 

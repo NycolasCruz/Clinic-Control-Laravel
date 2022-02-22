@@ -25,7 +25,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="/create" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
+                    <form action="{{route('criar')}}" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
                         @csrf
                         <div class="form-group">
 
