@@ -156,7 +156,7 @@
             <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
         @endif
 
-        <div class="row">
+        <div id="card-register" class="row">
             @foreach($consults as $consult)
                 <div class="col-lg-4">
                     <div class="card {{ $consult->color }}">

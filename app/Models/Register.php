@@ -57,7 +57,7 @@ class Register extends Model
     }
 
     protected function defineStatus(array $status) {
-        if($this->attributes['sintomas']) {
+        if(isset($this->attributes['sintomas'])) {
             $info = json_decode($this->attributes['sintomas']);
             $contar = count($info);
             if($contar >= 1 && $contar <= 5) {

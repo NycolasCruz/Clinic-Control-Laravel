@@ -80,25 +80,35 @@
         {{-- ajax --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
         <script>
-            $("form[id='form-register']").submit(event => {
-                event.preventDefault()
+            $("form[id='form-register']").submit(function(event) {
+                event.preventDefault();
 
                 $.ajax({
                     url: "{{ route('criar') }}",
                     type: 'POST',
                     data: new FormData(this),
-                    dataType: 'json',
+                    dataType: 'JSON',
                     contentType: false,
                     processData: false,
-                    // success: response => {
+                    success: function(response) {
 
-                    // },
-                    // error: response => {
+                        console.log(response['dados']);
 
-                    // }
+                        swal('', response['message'], 'success')
+                        $('#register').modal('hide')
+                        $("form[id='form-register']")[0].reset()
+                    },
+                    error: function(response) {
+                        if(response['responseJSON']['errors']) {
+                            swal('Não Foi Possível Realizar Esta Ação!', response['responseJSON']['errors']['cpf']['0'], 'warning')
+                        }
+                    }
                 })
             })
-            // onsubmit="return validationFeedback()"
+                        // let data = response['dados']
+                        // let paciente = '';
+                        // $('#div_pacientes').append(paciente);
+                        // preppand
         </script>
 
     </div>
