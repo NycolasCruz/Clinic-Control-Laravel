@@ -85,15 +85,14 @@
                         $("form[id='form-register']")[0].reset()
 
                         let data = response['dados']
-                        let chooseName = if(){
-                            
-                        }
+                        console.log(data)
+                        
                         let cardRegister = `
                             <div class="col-lg-4">
                                 <div class="card ${data['color']}">
                                     <img src="/img/project/${data['image']}" class="card-img-top" title="Foto do Paciente">
                                     <div class="card-body">
-                                        <h5 class="card-title"><i class="fas fa-user icon-card"></i> ${data['name']} </h5>
+                                        <h5 class="card-title"><i class="fas fa-user icon-card"></i> ${data['choose_name']} </h5>
                                         <p class="card-text"><i class="fas fa-calendar-day icon-card"></i> <strong>IDADE:</strong> ${data['age']} ano(s)</p>
                                         <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> ${data['cpf']} </p>
                                         <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> ${data['number']} </p>

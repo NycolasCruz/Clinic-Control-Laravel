@@ -25,7 +25,8 @@ class Register extends Model
 
     protected $appends = [
         'status',
-        'color'
+        'color',
+        'choose_name'
     ];
 
     // mutators
