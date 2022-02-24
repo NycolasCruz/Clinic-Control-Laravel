@@ -35,12 +35,6 @@ class StoreUpdateRegisterRequest extends FormRequest
 
     function messages() {
         return [
-            '*.required'    => 'Este Campo É Obrigatório',
-            '*.image'       => 'Selecione Uma Imagem Válida',
-            'name.min'      => 'O Nome Deve Ser Válido',
-            'name.max'      => 'O Nome Deve Ser Válido',
-            'age.min'       => 'A Idade Deve Ser Válida',
-            'age.max'       => 'A Idade Deve Ser Válida',
             'cpf.unique'    => 'Este CPF Já Foi Cadastrado'
         ];
     }

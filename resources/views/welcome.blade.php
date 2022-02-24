@@ -25,7 +25,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form action="{{ route('criar') }}" method="POST" id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data" onsubmit="return validationFeedback()">
+                    <form id="form-register" class="register-form was-validated" name="form" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
 
@@ -156,7 +156,7 @@
             <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
         @endif
 
-        <div class="row">
+        <div id="card-register" class="row">
             @foreach($consults as $consult)
                 <div class="col-lg-4">
                     <div class="card {{ $consult->color }}">
