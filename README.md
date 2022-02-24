@@ -8,6 +8,7 @@
 - CSS
 - JavaScript
 - JQuery
+- AJAX
 - PHP
 - Laravel
 - Font Awesome
@@ -25,12 +26,12 @@
 - [x] Criação, visualização, edição e remoção de pacientes.
 - [x] Campo de pesquisa para filtrar pacientes a partir do nome ou nome social.
 - [x] Página específica que exibe os sintomas de cada paciente.
-- [x] Mensagens informativas (que ajudam e orientam o usuário)
-- [x] Validação de CPF e máscaras com JQuery 
+- [x] Mensagens informativas (que ajudam e orientam o usuário).
+- [x] Validação de CPF e máscaras com JQuery.
+- [X] Requisições AJAX.
 
 ## ⏱️ Em Breve
 
-- [ ] Requisições AJAX
 - [ ] Autenticação (quem não estiver logado poderá apenas visualizar os pacientes já cadastrados e suas informações)
 - [ ] Exibição dos pacientes também em forma de tabela (mais produtividade)
 

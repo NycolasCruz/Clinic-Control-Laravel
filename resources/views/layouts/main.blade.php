@@ -71,45 +71,46 @@
         <script>
             $("form[id='form-register']").submit(function(event) {
                 event.preventDefault()
+                if(validationFeedback() != false) {
+                    $.ajax({
+                        url: "{{ route('criar') }}",
+                        type: 'POST',
+                        data: new FormData(this),
+                        dataType: 'JSON',
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            swal('', response['message'], 'success')
+                            $('#register').modal('hide')
+                            $("form[id='form-register']")[0].reset()
 
-                $.ajax({
-                    url: "{{ route('criar') }}",
-                    type: 'POST',
-                    data: new FormData(this),
-                    dataType: 'JSON',
-                    contentType: false,
-                    processData: false,
-                    success: function(response) {
-                        swal('', response['message'], 'success')
-                        $('#register').modal('hide')
-                        $("form[id='form-register']")[0].reset()
-
-                        let data = response['dados']
-                        console.log(data)
-                        
-                        let cardRegister = `
-                            <div class="col-lg-4">
-                                <div class="card ${data['color']}">
-                                    <img src="/img/project/${data['image']}" class="card-img-top" title="Foto do Paciente">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><i class="fas fa-user icon-card"></i> ${data['choose_name']} </h5>
-                                        <p class="card-text"><i class="fas fa-calendar-day icon-card"></i> <strong>IDADE:</strong> ${data['age']} ano(s)</p>
-                                        <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> ${data['cpf']} </p>
-                                        <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> ${data['number']} </p>
-                                        <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> <strong> ${data['status']} </strong></p>
-                                        <a href="{{ route('mostrar.dados', $consult->id) }}" id="info-link" tabindex="-1"><i class="fas fa-info icon-card"></i><strong>MAIS INFORMAÇÕES</strong></a>
+                            let data = response['dados']
+                            console.log(data)
+                            
+                            let cardRegister = `
+                                <div class="col-lg-4">
+                                    <div class="card ${data['color']}">
+                                        <img src="/img/project/${data['image']}" class="card-img-top" title="Foto do Paciente">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><i class="fas fa-user icon-card"></i> ${data['choose_name']} </h5>
+                                            <p class="card-text"><i class="fas fa-calendar-day icon-card"></i> <strong>IDADE:</strong> ${data['age']} ano(s)</p>
+                                            <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> ${data['cpf']} </p>
+                                            <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> ${data['number']} </p>
+                                            <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> <strong> ${data['status']} </strong></p>
+                                            <a href="{{ route('mostrar.dados', $consult->id) }}" id="info-link" tabindex="-1"><i class="fas fa-info icon-card"></i><strong>MAIS INFORMAÇÕES</strong></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        `
-                        $('#card-register').prepend(cardRegister)
-                    },
-                    error: function(response) {
-                        if(response['responseJSON']['errors']) {
-                            swal('Não Foi Possível Realizar Esta Ação!', response['responseJSON']['errors']['cpf']['0'], 'warning')
+                            `
+                            $('#card-register').prepend(cardRegister)
+                        },
+                        error: function(response) {
+                            if(response['responseJSON']['errors']) {
+                                swal('Não Foi Possível Realizar Esta Ação!', response['responseJSON']['errors']['cpf']['0'], 'warning')
+                            }
                         }
-                    }
-                })
+                    })
+                }
             })
         </script>
     </div>
