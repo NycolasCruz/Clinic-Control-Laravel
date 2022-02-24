@@ -83,12 +83,9 @@
                             swal('', response['message'], 'success')
                             $('#register').modal('hide')
                             $("form[id='form-register']")[0].reset()
-
                             let data = response['dados']
-                            console.log(data)
-                            
                             let cardRegister = `
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="card ${data['color']}">
                                         <img src="/img/project/${data['image']}" class="card-img-top" title="Foto do Paciente">
                                         <div class="card-body">

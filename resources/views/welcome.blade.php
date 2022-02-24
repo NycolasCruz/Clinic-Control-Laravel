@@ -158,7 +158,7 @@
 
         <div id="card-register" class="row">
             @foreach($consults as $consult)
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card {{ $consult->color }}">
                         <img src="/img/project/{{ $consult->image }}" class="card-img-top" title="Foto do Paciente">
                         <div class="card-body">
