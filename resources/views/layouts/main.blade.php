@@ -97,7 +97,7 @@
                                             <p class="card-text"><i class="fas fa-id-card icon-card"></i> <strong>CPF:</strong> ${data['cpf']} </p>
                                             <p class="card-text"><i class="fas fa-mobile-alt icon-card"></i> <strong>NÚMERO:</strong> ${data['number']} </p>
                                             <p class="card-text"><i class="fas fa-virus-covid icon-card"></i> <strong> ${data['status']} </strong></p>
-                                            <a href="{{ route('mostrar.dados', $consult->id) }}" id="info-link" tabindex="-1"><i class="fas fa-info icon-card"></i><strong>MAIS INFORMAÇÕES</strong></a>
+                                            <a href="show/${data['id']}" id="info-link" tabindex="-1"><i class="fas fa-info icon-card"></i><strong>MAIS INFORMAÇÕES</strong></a>
                                         </div>
                                     </div>
                                 </div>
