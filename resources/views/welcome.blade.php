@@ -7,7 +7,7 @@
                 <a href="{{ route('pagina.principal') }}" tabindex="-1"><img src="/img/logo.png"></a>
             </div>
             <form action="{{ route('pagina.principal') }}" method="GET" class="d-flex">
-                @if($search)
+                @if(count($consults) != 0 && $search)
                     <a href="{{ route('pagina.principal') }}" class="navbar-brand" tabindex="1">Ver Todos Os Cadastros <i class="fas fa-users"></i></a>
                 @endif
                 <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#register" tabindex="1">Cadastrar Paciente <i class="fas fa-user-plus"></i></a>
@@ -151,9 +151,6 @@
         @if(count($consults) == 0 && $search)
             <h5 class="mt-2">Nenhum Paciente Encontrado Com {{ $search }} <i class="fas fa-frown"></i></h5>
             <a href="{{ route('pagina.principal') }}">Ver Todos os Cadastros!</a>
-        @elseif(count($consults) == 0)
-            <h5 class="mt-2">Nenhum Paciente Encontrado <i class="fas fa-frown"></i></h5>
-            <a class="mt-2" data-bs-toggle="modal" data-bs-target="#register">Cadastre Um Novo Paciente!</a>
         @endif
 
         <div id="card-register" class="row">
