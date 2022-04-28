@@ -30,11 +30,6 @@
 - [x] Validação de CPF e máscaras com JQuery.
 - [X] Requisições AJAX.
 
-## ⏱️ Em Breve
-
-- [ ] Autenticação (quem não estiver logado poderá apenas visualizar os pacientes já cadastrados e suas informações)
-- [ ] Exibição dos pacientes também em forma de tabela (mais produtividade)
-
 ## 🕹️ Instalação
 
 Ao clonar o projeto, utilize o comando abaixo para instalar o gerenciador de pacotes do PHP (pode demorar um pouco)
@@ -49,7 +44,7 @@ Agora crie um banco de dados com o nome clinic_control e insira as migrations co
 ````
 php artisan migrate
 ````
-Pronto! Agora é só ligar o seu banco de dados e o servidor com o comando:
+Pronto! Agora é só ligar o seu banco de dados local (caso não tenha instale o xampp) e o servidor com o comando:
 ````
 php artisan serve
 ````
