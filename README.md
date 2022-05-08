@@ -32,7 +32,7 @@
 
 ## 🕹️ Instalação
 
-Ao clonar o projeto, utilize o comando abaixo para instalar o gerenciador de pacotes do PHP (pode demorar um pouco)
+Certifique-se de ter o php, o apache e o composer instalados na sua máquina, caso não tenha, instale o executável do composer clicando neste link https://getcomposer.org/Composer-Setup.exe e instale o xampp para ter acesso ao apache a ao php. Agora clone o projeto e utilize o comando abaixo para instalar o gerenciador de pacotes do PHP (pode demorar um pouco)
 ````
 composer install
 ````
@@ -44,12 +44,12 @@ Agora crie um banco de dados com o nome clinic_control e insira as migrations co
 ````
 php artisan migrate
 ````
-Pronto! Agora é só ligar o seu banco de dados local (caso não tenha instale o xampp) e o servidor com o comando:
+Pronto! Agora é só ligar o seu banco de dados local e o servidor com o comando:
 ````
 php artisan serve
 ````
 
-## 🤖 Autor
+## 🐧 Autor
 
 <a href="https://github.com/NycolasCruz">
     <img src="https://github.com/NycolasCruz.png"  width="15%">
