@@ -32,7 +32,7 @@
 
 ## 🕹️ Instalação
 
-Certifique-se de ter o php, o apache e o composer instalados na sua máquina, caso não tenha, instale o executável do composer clicando neste link https://getcomposer.org/Composer-Setup.exe e instale o xampp para ter acesso ao apache a ao php. Agora clone o projeto e utilize o comando abaixo para instalar o gerenciador de pacotes do PHP (pode demorar um pouco)
+Certifique-se de ter o php, o apache, o node e o composer instalados na sua máquina, caso não tenha, instale o executável do composer clicando neste link https://getcomposer.org/Composer-Setup.exe e instale o xampp para ter acesso ao apache a ao php. Você também pode instalar o node neste link https://nodejs.org/en/ Agora clone o projeto e utilize o comando abaixo para instalar o gerenciador de pacotes do PHP (pode demorar um pouco)
 ````
 composer install
 ````
