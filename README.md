@@ -44,6 +44,10 @@ Agora crie um banco de dados com o nome clinic_control e insira as migrations co
 ````
 php artisan migrate
 ````
+Agora instale as dependências do Node e as execute, usando
+````
+npm install && npm run dev
+````
 Pronto! Agora é só ligar o seu banco de dados local e o servidor com o comando:
 ````
 php artisan serve
